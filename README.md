@@ -1,10 +1,10 @@
-# Logging With Serilog
+# Serilog ile Loglama 
 
 ### Kurulum
 
-> PM> Install-Package Serilog.AspNetCore
-> PM> Install-Package Serilog.Sinks.Console
-> PM> Install-Package Serilog.Sinks.MSSqlServer
+> PM> Install-Package Serilog.AspNetCore__
+> PM> Install-Package Serilog.Sinks.Console__
+> PM> Install-Package Serilog.Sinks.MSSqlServer__
 > PM> Install-Package Serilog.Sinks.Seq
 
 ### SeriLog Nedir?
@@ -37,9 +37,15 @@ CREATE TABLE [dbo].[Logs](
 	[Properties] [xml] NULL,
 	[LogEvent] [nvarchar](max) NULL,
  CONSTRAINT [PK_Logs] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	(
+		[Id] ASC
+	)WITH (	PAD_INDEX = OFF, 
+			STATISTICS_NORECOMPUTE = OFF, 
+			IGNORE_DUP_KEY = OFF, 
+			ALLOW_ROW_LOCKS = ON, 
+			ALLOW_PAGE_LOCKS = ON
+		   ) 
+	ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 ```
@@ -109,9 +115,9 @@ Log.Debug("Info {@Person}",person);
 Log.ForContext("UserName", "Caner").Error("Test Error Ekstra.");
 ```
 Arama Anahtarı;
-> Person.Name = "Caner"
-> Person.Name = "Caner" && Person.City = "İstanbul" && Person.Age > 15
-> UserName = "Caner"
-> @Level = "Error"
-> select names() from stream
-> select @Message from stream
+> Person.Name = "Caner"__
+> Person.Name = "Caner" && Person.City = "İstanbul" && Person.Age > 15__
+> UserName = "Caner"__
+> @Level = "Error"__
+> select names() from stream__
+> select @Message from stream__

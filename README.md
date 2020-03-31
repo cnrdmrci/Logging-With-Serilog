@@ -2,9 +2,9 @@
 
 ### Kurulum
 
-> PM> Install-Package Serilog.AspNetCore__
-> PM> Install-Package Serilog.Sinks.Console__
-> PM> Install-Package Serilog.Sinks.MSSqlServer__
+> PM> Install-Package Serilog.AspNetCore\
+> PM> Install-Package Serilog.Sinks.Console\
+> PM> Install-Package Serilog.Sinks.MSSqlServer\
 > PM> Install-Package Serilog.Sinks.Seq
 
 ### SeriLog Nedir?
@@ -115,9 +115,9 @@ Log.Debug("Info {@Person}",person);
 Log.ForContext("UserName", "Caner").Error("Test Error Ekstra.");
 ```
 Arama Anahtarı;
-> Person.Name = "Caner"__
-> Person.Name = "Caner" && Person.City = "İstanbul" && Person.Age > 15__
-> UserName = "Caner"__
-> @Level = "Error"__
-> select names() from stream__
-> select @Message from stream__
+> Person.Name = "Caner"\
+> Person.Name = "Caner" && Person.City = "İstanbul" && Person.Age > 15\
+> UserName = "Caner"\
+> @Level = "Error"\
+> select names() from stream\
+> select @Message from stream
